@@ -5,15 +5,15 @@ export function Background() {
   return (
     <Box
       sx={{
-        height: "40%", // muestra solo la mitad horizontal
-        overflow: "hidden", // oculta lo que se sale del contenedor
+        height: "40%",
+        overflow: "hidden",
       }}
     >
       <Box
         component="img"
         src={FoodBackground}
         alt="food plate"
-        sx={{ borderRadius: 2, width: "100%" }}
+        sx={{ width: "100%" }}
       />
     </Box>
   );

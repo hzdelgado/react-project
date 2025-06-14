@@ -7,7 +7,8 @@ export default function Footer() {
       sx={{
         backgroundColor: '#f5f5f5',
         padding: '2rem 0',
-        marginTop: 'auto'
+        marginTop: 'auto',
+        bottom: 0
       }}
     >
       <Container maxWidth="lg">

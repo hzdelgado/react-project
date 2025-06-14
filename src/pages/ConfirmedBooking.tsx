@@ -7,7 +7,7 @@ export default function Confirmation() {
     <>
       <Background />
       <PageSection>
-        <Stack display="flex" flexDirection="column" alignItems={"center"}>
+        <Stack display="flex" flexDirection="column" alignItems={"center"} sx={{ paddingX: 2 }}>
           <Typography variant="h2" gutterBottom>
             ¡Reserva confirmada!
           </Typography>

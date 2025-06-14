@@ -5,7 +5,7 @@ export const styles = {
         width: "max-content",
         paddingX: 4,
         position:'absolute',
-        top: '20vh',
+        top: '15vh',
         left: '50%',
         transform: 'translateX(-50%)', 
         zIndex: '100'

@@ -7,14 +7,14 @@ type PageSectionProps = {
 export function PageSection({ children }: PageSectionProps) {
   return (
     <Stack
-      direction="row"
+      direction={{ xs: "column", md: "row" }}
       sx={{
         maxWidth: "1100px",
         alignItems: "center",
-        columnGap: 12,
+        columnGap: { xs: 4, md: 12 },
+        rowGap: { xs: 4, md: 0 },
         width: "100%",
-        mx: "auto", // centra horizontalmente
-        px: 2, // padding lateral opcional para responsividad
+        mx: "auto",
       }}
     >
       {children}

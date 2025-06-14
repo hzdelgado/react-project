@@ -23,7 +23,7 @@ export function Hero() {
       <PageSection>
         <Stack
           flex="1 1 0"
-          sx={{ width: "100%", alignItems: { xs: "center", md: "flex-start" }, px: 1, textAlign: { xs: "center", md: "left" }, }}
+          sx={styles.headline}
         >
           <Typography
             variant="h1"
@@ -60,13 +60,7 @@ export function Hero() {
             component="img"
             src={MainImage}
             alt="Plato mediterráneo de Little Lemon"
-            sx={{
-              width: { xs: "100%", md: "auto" },
-              maxHeight: { xs: 250, md: 400 },
-              height: "auto",
-              borderRadius: 2,
-              transform: { xs: "rotate(0deg)", md: "rotate(90deg)" },
-            }}
+            sx={styles.mainImage}
           />
         </Stack>
       </PageSection>

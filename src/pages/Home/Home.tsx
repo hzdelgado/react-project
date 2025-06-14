@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
-import { FoodSlider } from "./components/food-slider";
-import { Hero } from "./components/hero";
+import { FoodSlider } from "./components/FoodSlider";
+import { Hero } from "./components/Hero";
 
 export default function Home() {
   return (

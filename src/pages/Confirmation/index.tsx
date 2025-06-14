@@ -11,12 +11,12 @@ export default function Confirmation() {
   };
   return (
     <>
-      <Background />
+      <Background/>
       <PageSection>
         <Stack
           display="flex"
           flexDirection="column"
-          sx={{ paddingX: 2, flex: '1 1 0', gap: 2 }}
+          sx={{ mt: 6, maxWidth: 500, width: "100%", mx: "auto", gap: 4 }}
         >
           <Typography variant="h2" gutterBottom>
             ¡Reserva confirmada!

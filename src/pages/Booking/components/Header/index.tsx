@@ -1,13 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import { styles } from "../../Booking.styles";
 
-export function Header() {
+type HeaderProps = {
+  title: string;
+};
+
+export function Header({ title }: Readonly<HeaderProps>) {
   return (
-    <Box
-      sx={styles.header}
-    >
+    <Box sx={styles.header}>
       <Typography variant="h2" gutterBottom sx={styles.title}>
-        Reservar una mesa
+        {title}
       </Typography>
     </Box>
   );

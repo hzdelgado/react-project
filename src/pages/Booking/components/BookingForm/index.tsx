@@ -1,8 +1,16 @@
-import { Box, Button, TextField, Stack, Typography, MenuItem } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Stack,
+  Typography,
+  MenuItem,
+} from "@mui/material";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { bookingSchema, type BookingFormData } from "./booking-form.schema";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function BookingForm() {
   const {
@@ -13,6 +21,13 @@ export default function BookingForm() {
     resolver: yupResolver(bookingSchema),
   });
   const navigate = useNavigate();
+  const [minDate, setMinDate] = useState("");
+
+  useEffect(() => {
+    const today = new Date();
+    const formatted = today.toISOString().split("T")[0];
+    setMinDate(formatted);
+  }, []);
 
   const onSubmit = () => {
     navigate("/confirmation");
@@ -22,41 +37,37 @@ export default function BookingForm() {
     <Box
       component="form"
       onSubmit={handleSubmit(onSubmit)}
-      sx={{ mt: 6 }}
+      sx={{ mt: 6, maxWidth: 500, width: "100%", mx: "auto", px: 2 }}
       width="100%"
     >
       <Stack spacing={3} sx={{ paddingX: 2 }}>
         <Box component="label" htmlFor="firstName">
           <Typography variant="subtitle1">Nombre:</Typography>
-          <TextField
-            id="firstName"
-            {...register("firstName")}
-            fullWidth
-          />
+          <TextField id="firstName" {...register("firstName")} fullWidth />
           {errors.firstName && (
-            <Typography color="error">
-              {errors.firstName.message}
-            </Typography>
+            <Typography color="error">{errors.firstName.message}</Typography>
           )}
         </Box>
 
         <Box component="label" htmlFor="lastName">
           <Typography variant="subtitle1">Apellido:</Typography>
-          <TextField
-            id="lastName"
-            {...register("lastName")}
-            fullWidth
-          />
+          <TextField id="lastName" {...register("lastName")} fullWidth />
           {errors.lastName && (
-            <Typography color="error">
-              {errors.lastName.message}
-            </Typography>
+            <Typography color="error">{errors.lastName.message}</Typography>
           )}
         </Box>
-        <Box  component="label" htmlFor="date">
-           <Typography variant="subtitle1">Fecha:</Typography>
-          <TextField id="date" type="date" {...register("date")} fullWidth InputLabelProps={{ shrink: true }} />
-          {errors.date && <Typography color="error">{errors.date.message}</Typography>}
+        <Box component="label" htmlFor="date">
+          <Typography variant="subtitle1">Fecha:</Typography>
+          <TextField
+            id="date"
+            type="date"
+            {...register("date")}
+            fullWidth
+            inputProps={{ min: minDate }}
+          />
+          {errors.date && (
+            <Typography color="error">{errors.date.message}</Typography>
+          )}
         </Box>
 
         <Box component="label" htmlFor="time">
@@ -76,7 +87,7 @@ export default function BookingForm() {
             <Typography color="error">{errors.time.message}</Typography>
           )}
         </Box>
-        
+
         <Box component="label" htmlFor="guests">
           <Typography variant="subtitle1">Número de comensales:</Typography>
           <TextField
@@ -85,9 +96,11 @@ export default function BookingForm() {
             {...register("guests")}
             fullWidth
           />
-          {errors.guests && <Typography color="error">{errors.guests.message}</Typography>}
+          {errors.guests && (
+            <Typography color="error">{errors.guests.message}</Typography>
+          )}
         </Box>
-        <Button type="submit" variant="contained">
+        <Button type="submit" color="secondary" variant="contained">
           Reservar
         </Button>
       </Stack>

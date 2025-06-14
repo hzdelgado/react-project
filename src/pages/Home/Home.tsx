@@ -4,7 +4,7 @@ import { Hero } from "./components/hero";
 
 export default function Home() {
   return (
-    <Stack display="flex" flexDirection="column" height="100%">
+    <Stack display="flex" flexDirection="column" height="100%" >
       <Hero />
       <FoodSlider />
     </Stack>

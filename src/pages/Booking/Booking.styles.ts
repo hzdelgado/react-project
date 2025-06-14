@@ -1,9 +1,9 @@
 export const styles = {
     header: {
         backgroundColor: "primary.main",
-        paddingY: 2,
+        paddingX: 1,
+        paddingY: 0,
         width: "max-content",
-        paddingX: 4,
         position:'absolute',
         top: '15vh',
         left: '50%',

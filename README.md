@@ -46,3 +46,9 @@ Simula el sitio web del restaurante ficticio *Little Lemon*, donde los usuarios 
    ```bash
    http://localhost:5173
    ```
+## 📜 Licencia
+
+Este proyecto fue desarrollado exclusivamente con fines educativos como parte del programa [Meta Front-End Developer](https://www.coursera.org/professional-certificates/meta-front-end-developer) en Coursera.
+
+El contenido y el código fuente están disponibles **únicamente para uso académico o personal**.  
+No está permitido su uso con fi

@@ -1,23 +1,48 @@
-# Little Lemon Restaurant
+# Little Lemon Restaurant 🍋
 
-Este es el proyecto final del curso Meta Front-End Developer. Simula el sitio web del restaurante ficticio "Little Lemon", permitiendo a los usuarios realizar reservas y navegar por la información del restaurante.
+Este es el proyecto final (Capstone) del curso **Meta Front-End Developer** en Coursera.  
+Simula el sitio web del restaurante ficticio *Little Lemon*, donde los usuarios pueden explorar el sitio y realizar reservas de manera sencilla.
 
-## Tecnologías
+---
 
-- React
-- React Router
-- CSS Flexbox y Grid
-- Accesibilidad básica
+## 🧑‍💻 Tecnologías utilizadas
 
-## Funcionalidades
+- ⚛️ React con TypeScript
+- 🔀 React Router DOM
+- 🎨 Material UI (MUI)
+- 📦 Vite
+- 🧱 CSS Flexbox y Grid (con soporte de MUI)
+- ♿ Accesibilidad básica
 
-- Página de inicio con menú
+---
+
+## ✨ Funcionalidades
+
+- Página de inicio con introducción al restaurante
 - Formulario de reservas con validaciones
-- Redirección a página de confirmación
-- Responsive design
+- Redirección automática a una página de confirmación
+- Navegación entre páginas con React Router
+- Diseño **responsive** adaptado para móviles y escritorio
+- Componentes reutilizables (`Navbar`, `Footer`, `PageSection`, etc.)
 
-## Cómo ejecutar
+---
 
-```bash
-npm install
-npm start
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona este repositorio:
+   ```bash
+   git clone git@github.com:hzdelgado/react-project.git
+   cd little-lemon
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre en tu navegador:
+   ```bash
+   http://localhost:5173
+   ```

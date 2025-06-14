@@ -6,6 +6,7 @@ import FoodFour from "../../../../assets/food/food4.webp";
 export function FoodSlider() {
   return (
     <Stack
+      component="section"
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -13,12 +14,13 @@ export function FoodSlider() {
       sx={{ width: "100%", marginBottom: 3 }}
     >
       <Stack
+        component="header"
         sx={{
           width: { xs: "100%", md: "600px" },
           textAlign: { xs: "center", md: "left" },
         }}
       >
-        <Typography variant="h4" color="text.primary" gutterBottom>
+        <Typography variant="h4" color="text.primary" component="h2" gutterBottom>
           Nuestros especiales de esta semana
         </Typography>
         <Button
@@ -32,6 +34,7 @@ export function FoodSlider() {
       </Stack>
 
       <Stack
+        component="ul"
         display="flex"
         flexDirection={{ xs: "column", md: "row" }}
         gap={3}
@@ -39,36 +42,25 @@ export function FoodSlider() {
         alignItems="center"
         sx={{ width: "100%" }}
       >
-        <Box
-          component="img"
-          src={FoodTwo}
-          alt="food plate"
-          sx={{
-            borderRadius: 2,
-            maxWidth: 300,
-            width: "100%",
-          }}
-        />
-        <Box
-          component="img"
-          src={FoodThree}
-          alt="food plate"
-          sx={{
-            borderRadius: 2,
-            maxWidth: 300,
-            width: "100%",
-          }}
-        />
-        <Box
-          component="img"
-          src={FoodFour}
-          alt="food plate"
-          sx={{
-            borderRadius: 2,
-            maxWidth: 300,
-            width: "100%",
-          }}
-        />
+        {[FoodTwo, FoodThree, FoodFour].map((src, index) => (
+          <Box
+            component="li"
+            key={index}
+            sx={{ maxWidth: 300, width: "100%" }}
+          >
+            <Box
+              component="img"
+              src={src}
+              alt={`Plato especial ${index + 1}`}
+              sx={{
+                borderRadius: 2,
+                width: "100%",
+                display: "block",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
+        ))}
       </Stack>
     </Stack>
   );

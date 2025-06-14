@@ -1,40 +1,46 @@
-import { useState } from "react";
+import { Box, Button, TextField, Stack, Typography } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { bookingSchema, type BookingFormData } from "./booking-form.schema";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, TextField, Stack } from "@mui/material";
 
 export default function BookingForm() {
-  const [date, setDate] = useState("");
-  const [guests, setGuests] = useState<number>(1);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<BookingFormData>({
+    resolver: yupResolver(bookingSchema),
+  });
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!date || guests < 1) {
-      alert("Por favor completa todos los campos");
-      return;
-    }
+  const onSubmit = () => {
     navigate("/confirmation");
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 6 }} width="100%">
+    <Box
+      component="form"
+      onSubmit={handleSubmit(onSubmit)}
+      sx={{ mt: 6 }}
+      width="100%"
+    >
       <Stack spacing={3} sx={{ paddingX: 2 }}>
-        <TextField
-          label="Fecha"
-          type="date"
-          InputLabelProps={{ shrink: true }}
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
-        <TextField
-          label="Número de comensales"
-          type="number"
-          inputProps={{ min: 1, max: 10 }}
-          value={guests}
-          onChange={(e) => setGuests(Number(e.target.value))}
-          required
-        />
+        <Box  component="label" htmlFor="date">
+           <Typography variant="subtitle1">Fecha:</Typography>
+          <TextField id="date" type="date" {...register("date")} fullWidth InputLabelProps={{ shrink: true }} />
+          {errors.date && <Typography color="error">{errors.date.message}</Typography>}
+        </Box>
+        <Box component="label" htmlFor="guests">
+          <Typography variant="subtitle1">Número de comensales:</Typography>
+          <TextField
+            id="guests"
+            type="number"
+            {...register("guests")}
+            fullWidth
+          />
+          {errors.guests && <Typography color="error">{errors.guests.message}</Typography>}
+        </Box>
         <Button type="submit" variant="contained">
           Reservar
         </Button>

@@ -5,6 +5,7 @@ import { styles } from "../../Navbar.styles";
 export function DesktopNavbar() {
   return (
     <Stack
+    component="nav"
       direction="row"
       spacing={3}
       sx={{ display: { xs: "none", md: "flex" } }}

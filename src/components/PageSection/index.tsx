@@ -7,6 +7,7 @@ type PageSectionProps = {
 export function PageSection({ children }: PageSectionProps) {
   return (
     <Stack
+      component="section"
       direction={{ xs: "column", md: "row" }}
       sx={{
         maxWidth: "1100px",

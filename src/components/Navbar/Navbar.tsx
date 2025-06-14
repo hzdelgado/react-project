@@ -7,7 +7,7 @@ import { MenuMobile } from "./components/MenuMobile";
 export default function Navbar() {
   return (
     <AppBar position="static" sx={{ background: "white", boxShadow: 1 }}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+      <Toolbar component="nav" sx={{ justifyContent: "space-between" }}>
         {/* Logo */}
         <RouterLink to="/">
           <Box

@@ -26,6 +26,17 @@ Simula el sitio web del restaurante ficticio *Little Lemon*, donde los usuarios 
 - Componentes reutilizables (`Navbar`, `Footer`, `PageSection`, etc.)
 
 ---
+## 📁 Estructura del Proyecto
+
+La estructura del proyecto sigue una organización modular para facilitar su mantenimiento y escalabilidad. A continuación se muestra cómo está organizada la carpeta `src/`:
+
+- **`assets/`**: Contiene imágenes, iconos y otros recursos estáticos utilizados en la interfaz de usuario.
+- **`components/`**: Incluye componentes reutilizables como la barra de navegación (Navbar), pie de página (Footer), y otros bloques de contenido.
+- **`pages/`**: Contiene los componentes para las páginas principales, como `Home`, `Booking`, `ConfirmedBooking` y una página de `NotFound` para rutas no válidas.
+- **`App.tsx`**: Componente raíz que configura las rutas y la estructura principal de la interfaz.
+- **`main.tsx`**: El archivo de entrada que renderiza el componente `App`.
+- **`theme.ts`**: Archivo de tema global para Material UI.
+
 
 ## 🚀 Cómo ejecutar el proyecto
 
@@ -51,4 +62,4 @@ Simula el sitio web del restaurante ficticio *Little Lemon*, donde los usuarios 
 Este proyecto fue desarrollado exclusivamente con fines educativos como parte del programa [Meta Front-End Developer](https://www.coursera.org/professional-certificates/meta-front-end-developer) en Coursera.
 
 El contenido y el código fuente están disponibles **únicamente para uso académico o personal**.  
-No está permitido su uso con fi
+No está permitido su uso con fines comerciales sin autorización.

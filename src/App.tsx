@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import Booking from './pages/Booking/Booking';
-import Confirmation from './pages/ConfirmedBooking';
+import Confirmation from './pages/Confirmation';
 import NotFound from './pages/NotFound';
 import { Box } from '@mui/material';
 import Navbar from './components/Navbar/Navbar';

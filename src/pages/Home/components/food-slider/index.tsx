@@ -22,8 +22,8 @@ export function FoodSlider() {
           Nuestros especiales de esta semana
         </Typography>
         <Button
-          color="secondary"
-          variant="contained"
+          color="primary"
+          variant="outlined"
           size="small"
           sx={{ alignSelf: { xs: "center", md: "flex-start" } }}
         >

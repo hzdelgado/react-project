@@ -33,7 +33,7 @@ export function Hero() {
           Disfruta nuestra deliciosa comida mediterránea.
         </Typography>
         <Button color="secondary" variant="contained" onClick={handleNavigate}>
-          RESERVAR
+          Reservar
         </Button>
       </Box>
     </Stack>

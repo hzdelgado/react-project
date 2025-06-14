@@ -32,7 +32,7 @@ export function Hero() {
         component="img"
         src={MainImage}
         alt="Little Lemon Logo"
-        sx={{ width: '100%', maxWidth: 400, borderRadius: 2,  transform: 'rotate(90deg)', }}
+        sx={{ maxHeight: 700, minHeight: 400, height: 400, borderRadius: 2,  transform: 'rotate(90deg)', }}
       />
     </Box>
   </Stack>

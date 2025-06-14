@@ -1,16 +1,15 @@
-import { Stack, Typography } from "@mui/material";
-import BookingForm from "../../components/BookingForm";
+import { Stack } from "@mui/material";
 import { PageSection } from "../../components/PageSection";
 import { Background } from "./components/Background";
+import { Header } from "./components/Header";
+import BookingForm from "./components/BookingForm";
 export default function Booking() {
   return (
     <>
       <Background />
+      <Header />
       <Stack display="flex" flexDirection="column">
         <PageSection>
-          <Typography variant="h2" gutterBottom>
-            Reservar una mesa
-          </Typography>
           <BookingForm />
         </PageSection>
       </Stack>

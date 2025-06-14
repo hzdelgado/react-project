@@ -14,7 +14,7 @@ export function MenuMobile() {
     setAnchorEl(null);
   };
   return (
-    <Box sx={{ display: { xs: "flex", md: "none", paddingX: 2 } }}>
+    <Box component="nav" sx={{ display: { xs: "flex", md: "none", paddingX: 2 } }}>
       <IconButton onClick={handleOpenMenu} size="large">
         <MenuIcon />
       </IconButton>

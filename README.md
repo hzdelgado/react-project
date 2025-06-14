@@ -11,6 +11,7 @@ Simula el sitio web del restaurante ficticio *Little Lemon*, donde los usuarios 
 - 🔀 React Router DOM
 - 🎨 Material UI (MUI)
 - 📦 Vite
+- ✅ Yup para validaciones de formularios
 - 🧱 CSS Flexbox y Grid (con soporte de MUI)
 - ♿ Accesibilidad básica
 

@@ -1,6 +1,7 @@
-import { Typography, Box, Grid, Button, Stack } from '@mui/material';
+import { Typography, Box, Button, Stack } from '@mui/material';
 import { styles } from '../../Home.styles';
 import MainImage from '../../../../assets/food/food1.png';
+import { PageSection } from '../../../../components/PageSection';
 export function Hero() {
     return(<Stack
   sx={{
@@ -10,12 +11,7 @@ export function Hero() {
     height: '40vh'
     }}
 >
-  <Stack flexDirection="row" maxWidth='1100px' sx={{
-    maxWidth: '1100px',
-    flexDirection: 'row',
-    alignItems: 'center',
-    columnGap: 12
-    }}>
+  <PageSection>
   <Stack flex="1 1 0">
     <Box display="flex" flexDirection="column" gap={2}>
       <Typography variant="h3" gutterBottom sx={styles.heading}>
@@ -40,6 +36,6 @@ export function Hero() {
       />
     </Box>
   </Stack>
-  </Stack>
+  </PageSection>
 </Stack>)
 }

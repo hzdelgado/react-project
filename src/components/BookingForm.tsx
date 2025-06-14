@@ -19,7 +19,7 @@ export default function BookingForm() {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
+    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 6 }} width="100%">
       <Stack spacing={3}>
         <TextField
           label="Fecha"

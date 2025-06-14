@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
-import Booking from './pages/Booking';
+import Booking from './pages/Booking/Booking';
 import Confirmation from './pages/ConfirmedBooking';
 import NotFound from './pages/NotFound';
 
